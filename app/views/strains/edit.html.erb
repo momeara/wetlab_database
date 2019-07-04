@@ -1,0 +1,85 @@
+<h1>Edit article</h1>
+
+<%= form_with(model: @strain, local: true) do |form| %>
+
+  <p>
+    <%= form.label :accession %><br>
+    <%= form.text_field :accession %>
+  </p>
+
+  <p>
+    <%= form.label :common_name %><br>
+    <%= form.text_field :common_name %>
+  </p>
+
+  <p>
+    <%= form.label :strain_background %><br>
+    <%= form.text_field :strain_background %>
+  </p>
+
+  <p>
+    <%= form.label :general_info %><br>
+    <%= form.text_field :general_info %>
+  </p>
+
+  <p>
+    <%= form.label :source %><br>
+    <%= form.text_field :source %>
+  </p>
+
+  <p>
+    <%= form.label :keywords %><br>
+    <%= form.text_field :keywords %>
+  </p>
+
+  <p>
+    <%= form.label :genotype %><br>
+    <%= form.text_area :gentype %>
+  </p>
+
+  <p>
+    <%= form.label :phenotype %><br>
+    <%= form.text_area :phenotype %>
+  </p>
+
+  <p>
+    <%= form.label :ploidy %><br>
+    <%= form.text_field :ploidy %>
+  </p>
+
+  <p>
+    <%= form.label :reference %><br>
+    <%= form.text_area :reference %>
+  </p>
+
+  <p>
+    <%= form.label :sequence_validated %><br>
+    <%= form.text_field :sequence_validated %>
+  </p>
+
+  <p>
+    <%= form.label :method %><br>
+    <%= form.text_area :method %>
+  </p>
+
+  <p>
+    <%= form.label :Mutant_source_DNA %><br>
+    <%= form.text_area :Mutant_source_DNA %>
+  </p>
+
+  <p>
+    <%= form.label :upstream_check_primers %><br>
+    <%= form.text_area :upstream_check_primers %>
+  </p>
+
+  <p>
+    <%= form.label :downstream_check_primers %><br>
+    <%= form.text_area :downstream_check_primers %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back to main page', welcome_index_path %>

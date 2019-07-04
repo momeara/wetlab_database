@@ -1,0 +1,19 @@
+<h1>O'Meara Lab Fungal Strains</h1>
+
+<table>
+  <tr>
+    <th>Accession</th>
+    <th></th>
+  </tr>
+
+  <% @strains.each do |strain| %>
+    <tr>
+      <td><%= strain.accession %></td>
+      <td><%= strain.common_name %></td>
+      <td><%= link_to 'Show', strain_path(strain) %></td>
+      <td><%= link_to 'Edit', edit_strain_path(strain) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back to main page', welcome_index_path %>

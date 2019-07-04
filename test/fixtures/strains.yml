@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accession: MyString
+  common_name: MyText
+  strain_background: MyText
+  general_info: MyText
+  source: MyText
+  keywords: MyText
+  genotype: MyText
+  phenotype: MyText
+  ploidy: MyText
+  reference: MyText
+  sequence_validated: MyText
+  method: MyText
+  Mutant_source_DNA: MyText
+  upstream_check_primers: MyText
+  downstream_check_primers: MyText
+
+two:
+  accession: MyString
+  common_name: MyText
+  strain_background: MyText
+  general_info: MyText
+  source: MyText
+  keywords: MyText
+  genotype: MyText
+  phenotype: MyText
+  ploidy: MyText
+  reference: MyText
+  sequence_validated: MyText
+  method: MyText
+  Mutant_source_DNA: MyText
+  upstream_check_primers: MyText
+  downstream_check_primers: MyText
