@@ -31,8 +31,17 @@
 	<div class="panel-body">
 	  <span class="font-weight-bold">Strain Background:</span> <%= @strain.strain_background %> </br>
 	  <span class="font-weight-bold">Source:</span> <%= @strain.source %> </br>
-          <span class="font-weight-bold">Mutant source DNA:</span> <%= @strain.Mutant_source_DNA %> </br>
+
+
+	  <!--show if TOMeara Lab -->
+	  <span class="font-weight-bold">Method:</span> <%= @strain.method %> </br>
+	  <span class="font-weight-bold">Mutant source DNA:</span> <%= @strain.Mutant_source_DNA %> </br>
+          <span class="font-weight-bold">upstream_check_primers:</span> <%= @strain.upstream_check_primers %> </br>
+          <span class="font-weight-bold">downstream_check_primers:</span> <%= @strain.downstream_check_primers %> </br>
+
+	  <!--show if Other Lab -->	  
           <span class="font-weight-bold">Reference:</span> <%= @strain.reference %> </br>
+          <span class="font-weight-bold">Sequence Validated:</span> <%= @strain.sequence_validated %> </br>
 	</div>
       </div>
     </div>
@@ -43,25 +52,22 @@
 	  <h4>Genomic characterization</h4>
 	</div>
 	<div class="panel-body">
-	  <span class="font-weight-bold">General Info:</span> <%= @strain.general_info %> </br>
+	  <span class="font-weight-bold">General Info:</span></br>
+	  <p><%= @strain.general_info %></p> </br>
           <span class="font-weight-bold">Genotype:</span> <%= @strain.genotype %> </br>
-          <span class="font-weight-bold">Phenotype:</span> <%= @strain.phenotype %> </br>
           <span class="font-weight-bold">Ploidy:</span> <%= @strain.ploidy %> </br>
+          <span class="font-weight-bold">Phenotype:</span> <%= @strain.phenotype %> </br>
 	</div>
       </div>
       <br>
       <br>
-      <div class="panel panel-default">
-	<div class="panel-heading">
-	  <h4>Molecular characterization</h4>
-	</div>
-	<div class="panel-body">
-          <span class="font-weight-bold">Sequence Validated:</span> <%= @strain.sequence_validated %> </br>
-          <span class="font-weight-bold">Method:</span> <%= @strain.method %> </br>
-          <span class="font-weight-bold">upstream_check_primers:</span> <%= @strain.upstream_check_primers %> </br>
-          <span class="font-weight-bold">downstream_check_primers:</span> <%= @strain.downstream_check_primers %> </br>
-	</div>
-      </div>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm text-right">
+      <h3>
+	<%= link_to 'Edit Strain', edit_strain_path(@strain) %>
+      </h3>
     </div>
   </div>
 </div>

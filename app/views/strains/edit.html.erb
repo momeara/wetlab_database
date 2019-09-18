@@ -45,13 +45,13 @@
 	  <%= form.select :source, ['O\'Meara Lab', 'Other Lab'], :required => true %> </br>
 
 	  <!--show if TOMeara Lab -->
+	  <br>
+	  Fill these in if O'Meara lab was selected:<br>
 	  <%= content_tag :div, class: 'js-dependent-fields', data: { 'source-id': 'strain_source', 'option-value': 'O\'Meara Lab'} do %>
 	    <%= form.label :method %>
 	    <%= form.text_field :method %> </br>
 	  <% end %>
 
-	  <br>
-	  Fill these in if O'Meara lab was selected:<br>
 	  <%= form.label :Mutant_source_DNA %>
 	  <%= form.text_field :Mutant_source_DNA %> </br>
 
