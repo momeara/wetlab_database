@@ -1,9 +1,7 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-  <img src="https://lh5.googleusercontent.com/8kZzlyAZLndo5RU0BXFhbxLrWLl3LZps8dGfzUmjBS4xvwm6FYClklR_JYX6yCZdR8MAmccZ=w16383" style="max-height: 56px; max-width: 225px;">
   <span>
     <h2>
-    <a href='http://https://omeara.lab.medicine.umich.edu/'>
+    <a href='https://omeara.lab.medicine.umich.edu/'>
       Teresa O'Meara Lab
     </a>
     </h2>
@@ -14,7 +12,6 @@
 <div class="jumbotron text-center">
   <h1>Lab Fungal Strains</h1>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-lg">
@@ -32,6 +29,9 @@
             <td><%= strain.common_name %></td>
             <td><%= link_to 'Show', strain_path(strain) %></td>
             <td><%= link_to 'Edit', edit_strain_path(strain) %></td>
+	    <td><%= link_to 'Destroy', strain_path(strain),
+		    method: :delete,
+		    data: {confirm: 'Are you sure?'} %></td>
           </tr>
           <% end %>
 	</tbody>

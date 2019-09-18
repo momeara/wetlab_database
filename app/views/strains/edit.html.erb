@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-  <img src="https://lh5.googleusercontent.com/8kZzlyAZLndo5RU0BXFhbxLrWLl3LZps8dGfzUmjBS4xvwm6FYClklR_JYX6yCZdR8MAmccZ=w16383" style="max-height: 56px; max-width: 225px;">
   <span>
     <h2>
-    <a href='http://https://omeara.lab.medicine.umich.edu/'>
+    <a href='https://omeara.lab.medicine.umich.edu/'>
       Teresa O'Meara Lab
     </a>
     </h2>
@@ -22,9 +21,14 @@
 	  <h4>Identifiers</h4>
 	</div>
 	<div class="panel-body">
-	  <%= form.label :accession %> <%= form.text_field :accession %> </br>
-	  <%= form.label :common_name %> <%= form.text_field :common_name %> </br>
-	  <%= form.label :keywords %> <%= form.text_field :keywords %> </br>
+	  <%= form.label :accession %>
+	  <%= form.text_field :accession, :required => true %> </br>
+
+	  <%= form.label :common_name %>
+	  <%= form.text_field :common_name, :required => true %> </br>
+
+	  <%= form.label :keywords %>
+	  <%= form.text_field :keywords %> </br>
 	</div>
       </div>
       <br>
@@ -34,10 +38,38 @@
 	  <h4>Source</h4>
 	</div>
 	<div class="panel-body">
-	  <%= form.label :strain_background %> <%= form.text_field :strain_background %> </br>
-	  <%= form.label :source %> <%= form.text_field :source %> </br>
-	  <%= form.label :Mutant_source_DNA %> <%= form.text_field :Mutant_source_DNA %> </br>
-	  <%= form.label :reference %> <%= form.text_field :reference %> </br>
+	  <%= form.label :strain_background %>
+	  <%= form.text_field :strain_background, :required => true%> </br>
+	  
+	  <%= form.label :source %>
+	  <%= form.select :source, ['O\'Meara Lab', 'Other Lab'], :required => true %> </br>
+
+	  <!--show if TOMeara Lab -->
+	  <%= content_tag :div, class: 'js-dependent-fields', data: { 'source-id': 'strain_source', 'option-value': 'O\'Meara Lab'} do %>
+	    <%= form.label :method %>
+	    <%= form.text_field :method %> </br>
+	  <% end %>
+
+	  <br>
+	  Fill these in if O'Meara lab was selected:<br>
+	  <%= form.label :Mutant_source_DNA %>
+	  <%= form.text_field :Mutant_source_DNA %> </br>
+
+	  <%= form.label :upstream_check_primers %>
+	  <%= form.text_field :upstream_check_primers %> </br>
+
+	  <%= form.label :downstream_check_primers %>
+	  <%= form.text_field :downstream_check_primers %> </br>
+
+	  <!--show if Other Lab -->
+	  <br>
+	  Fill these in if Other Lab was selected:<br>
+	  <%= form.label :reference %>
+	  <%= form.text_field :reference %> </br>
+
+	  <%= form.label :sequence_validated %>
+	  <%= form.text_field :sequence_validated %> </br>
+
 	</div>
       </div>
     </div>
@@ -45,34 +77,28 @@
     <div class="col-md">
       <div class="panel panel-default">
 	<div class="panel-heading">
-	  <h4>Genomic Characterization</h4>
+	  <h4>Characterization</h4>
 	</div>
 	<div class="panel-body">
-	  <%= form.label :general_info %> <%= form.text_field :general_info %> </br>
-	  <%= form.label :genotype %> <%= form.text_field :genotype %> </br>
-	  <%= form.label :phenotype %> <%= form.text_field :phenotype %> </br>
-	  <%= form.label :ploidy %> <%= form.text_field :ploidy %> </br>
+	  <%= form.label :general_info %><br>
+	  <%= form.text_area :general_info, :rows => 5, :required => true %> </br>
+
+	  <%= form.label :genotype %>
+	  <%= form.text_field :genotype, :required => true %> </br>
+
+	  <%= form.label :ploidy %>
+	  <%= form.text_field :ploidy, :required => true %> </br>
+
+	  <%= form.label :phenotype %>
+	  <%= form.text_field :phenotype %> </br>
 	</div>
       </div>
-      <br>
-      <br>
-      <div class="panel panel-default">
-	<div class="panel-heading">
-	  <h4>Molecular characterization</h4>
-	</div>
-	<div class="panel-body">
-	  <%= form.label :sequence_validated %> <%= form.text_field :sequence_validated %> </br>
-	  <%= form.label :method %> <%= form.text_field :method %> </br>
-	  <%= form.label :upstream_check_primers %> <%= form.text_field :upstream_check_primers %> </br>
-	  <%= form.label :downstream_check_primers %> <%= form.text_field :downstream_check_primers %> </br>
-	</div>
-      </div>  
     </div>
   </div>
   <br>
   <br>
   <div class="row">
-    <div class="col-sm">
+    <div class="col-lg">
       <center>
       <h2><%= form.submit %></h2>
       </center>

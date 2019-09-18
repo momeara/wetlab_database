@@ -33,6 +33,13 @@ http_basic_authenticate_with name: "omearalab", password: "example", except: [:i
     end
   end
 
+  def destroy
+    @strain = Strain.find(params[:id])
+    @strain.destroy
+    redirect_to strains_path
+  end
+
+  
   private
     def strain_params
       params.require(:strain).permit(

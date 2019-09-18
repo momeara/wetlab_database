@@ -13,4 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require dependent-fields
 //= require_tree .
+
+ $(document).ready(function() {
+     DependentFields.bind()
+ });
