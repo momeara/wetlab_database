@@ -1,79 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <img src="https://lh5.googleusercontent.com/8kZzlyAZLndo5RU0BXFhbxLrWLl3LZps8dGfzUmjBS4xvwm6FYClklR_JYX6yCZdR8MAmccZ=w16383" style="max-height: 56px; max-width: 225px;">
+  <span>
+    <h2>
+    <a href='http://https://omeara.lab.medicine.umich.edu/'>
+      Teresa O'Meara Lab
+    </a>
+    </h2>
+  </span>    
+  
+</nav>
 
-<p>
-  <strong>Accession:</strong>
-  <%= @strain.accession %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Identifiers</h4>
+	</div>
+	<div class="panel-body">
+	  <span class="font-weight-bold">Accession:</span> <%= @strain.accession %> </br>
+          <span class="font-weight-bold">Common Name:</span> <%= @strain.common_name %> </br>
+          <span class="font-weight-bold">keywords:</span> <%= @strain.keywords %> </br>
+	</div>
+      </div>
+      <br>
+      <br>
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Source</h4>
+	</div>
+	<div class="panel-body">
+	  <span class="font-weight-bold">Strain Background:</span> <%= @strain.strain_background %> </br>
+	  <span class="font-weight-bold">Source:</span> <%= @strain.source %> </br>
+          <span class="font-weight-bold">Mutant source DNA:</span> <%= @strain.Mutant_source_DNA %> </br>
+          <span class="font-weight-bold">Reference:</span> <%= @strain.reference %> </br>
+	</div>
+      </div>
+    </div>
 
-<p>
-  <strong>Common Name:</strong>
-  <%= @strain.common_name %>
-</p>
+    <div class="col-md">
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Genomic Characterization</h4>
+	</div>
+	<div class="panel-body">
+	  <span class="font-weight-bold">General Info:</span> <%= @strain.general_info %> </br>
+          <span class="font-weight-bold">Genotype:</span> <%= @strain.genotype %> </br>
+          <span class="font-weight-bold">Phenotype:</span> <%= @strain.phenotype %> </br>
+          <span class="font-weight-bold">Ploidy:</span> <%= @strain.ploidy %> </br>
+	</div>
+      </div>
+      <br>
+      <br>
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Molecular characterization</h4>
+	</div>
+	<div class="panel-body">
+          <span class="font-weight-bold">Sequence Validated:</span> <%= @strain.sequence_validated %> </br>
+          <span class="font-weight-bold">Method:</span> <%= @strain.method %> </br>
+          <span class="font-weight-bold">upstream_check_primers:</span> <%= @strain.upstream_check_primers %> </br>
+          <span class="font-weight-bold">downstream_check_primers:</span> <%= @strain.downstream_check_primers %> </br>
+	</div>
+      </div>  
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Strain Background:</strong>
-  <%= @strain.strain_background %>
-</p>
 
-<p>
-  <strong>General Info:</strong>
-  <%= @strain.general_info %>
-</p>
-
-<p>
-  <strong>Source:</strong>
-  <%= @strain.source %>
-</p>
-
-<p>
-  <strong>keywords:</strong>
-  <%= @strain.keywords %>
-</p>
-
-<p>
-  <strong>Genotype:</strong>
-  <%= @strain.genotype %>
-</p>
-
-<p>
-  <strong>Phenotype:</strong>
-  <%= @strain.phenotype %>
-</p>
-
-<p>
-  <strong>Ploidy:</strong>
-  <%= @strain.ploidy %>
-</p>
-
-<p>
-  <strong>Reference:</strong>
-  <%= @strain.reference %>
-</p>
-
-<p>
-  <strong>Sequence Validated:</strong>
-  <%= @strain.sequence_validated %>
-</p>
-
-<p>
-  <strong>Method:</strong>
-  <%= @strain.method %>
-</p>
-
-<p>
-  <strong>Mutant source DNA:</strong>
-  <%= @strain.Mutant_source_DNA %>
-</p>
-
-<p>
-  <strong>upstream_check_primers:</strong>
-  <%= @strain.upstream_check_primers %>
-</p>
-
-<p>
-  <strong>downstream_check_primers:</strong>
-  <%= @strain.downstream_check_primers %>
-</p>
-
+<hr>
 <%= link_to 'Back to strain page', strains_path %>
 <br>
 <%= link_to 'Back to main page', welcome_index_path %>

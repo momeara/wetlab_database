@@ -1,85 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <img src="https://lh5.googleusercontent.com/8kZzlyAZLndo5RU0BXFhbxLrWLl3LZps8dGfzUmjBS4xvwm6FYClklR_JYX6yCZdR8MAmccZ=w16383" style="max-height: 56px; max-width: 225px;">
+  <span>
+    <h2>
+    <a href='http://https://omeara.lab.medicine.umich.edu/'>
+      Teresa O'Meara Lab
+    </a>
+    </h2>
+  </span>    
+  
+</nav>
 
-<h1>New Strain</h1>
+
+<h1>New strain</h1>
 
 <%= form_with scope: :strain, url:strains_path, local: true do |form| %>
-  <p>
-    <%= form.label :accession %><br>
-    <%= form.text_field :accession %>
-  </p>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Identifiers</h4>
+	</div>
+	<div class="panel-body">
+	  <%= form.label :accession %> <%= form.text_field :accession %> </br>
+	  <%= form.label :common_name %> <%= form.text_field :common_name %> </br>
+	  <%= form.label :keywords %> <%= form.text_field :keywords %> </br>
+	</div>
+      </div>
+      <br>
+      <br>
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Source</h4>
+	</div>
+	<div class="panel-body">
+	  <%= form.label :strain_background %> <%= form.text_field :strain_background %> </br>
+	  <%= form.label :source %> <%= form.text_field :source %> </br>
+	  <%= form.label :Mutant_source_DNA %> <%= form.text_field :Mutant_source_DNA %> </br>
+	  <%= form.label :reference %> <%= form.text_field :reference %> </br>
+	</div>
+      </div>
+    </div>
 
-  <p>
-    <%= form.label :common_name %><br>
-    <%= form.text_field :common_name %>
-  </p>
+    <div class="col-md">
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Genomic Characterization</h4>
+	</div>
+	<div class="panel-body">
+	  <%= form.label :general_info %> <%= form.text_field :general_info %> </br>
+	  <%= form.label :genotype %> <%= form.text_field :genotype %> </br>
+	  <%= form.label :phenotype %> <%= form.text_field :phenotype %> </br>
+	  <%= form.label :ploidy %> <%= form.text_field :ploidy %> </br>
+	</div>
+      </div>
+      <br>
+      <br>
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Molecular characterization</h4>
+	</div>
+	<div class="panel-body">
+	  <%= form.label :sequence_validated %> <%= form.text_field :sequence_validated %> </br>
+	  <%= form.label :method %> <%= form.text_field :method %> </br>
+	  <%= form.label :upstream_check_primers %> <%= form.text_field :upstream_check_primers %> </br>
+	  <%= form.label :downstream_check_primers %> <%= form.text_field :downstream_check_primers %> </br>
+	</div>
+      </div>  
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <center>
+      <h2><%= form.submit %></h2>
+      </center>
+    </div>
+  </div>
+</div>
 
-  <p>
-    <%= form.label :strain_background %><br>
-    <%= form.text_field :strain_background %>
-  </p>
 
-  <p>
-    <%= form.label :general_info %><br>
-    <%= form.text_field :general_info %>
-  </p>
-
-  <p>
-    <%= form.label :source %><br>
-    <%= form.text_field :source %>
-  </p>
-
-  <p>
-    <%= form.label :keywords %><br>
-    <%= form.text_field :keywords %>
-  </p>
-
-  <p>
-    <%= form.label :genotype %><br>
-    <%= form.text_area :gentype %>
-  </p>
-
-  <p>
-    <%= form.label :phenotype %><br>
-    <%= form.text_area :phenotype %>
-  </p>
-
-  <p>
-    <%= form.label :ploidy %><br>
-    <%= form.text_field :ploidy %>
-  </p>
-
-  <p>
-    <%= form.label :reference %><br>
-    <%= form.text_area :reference %>
-  </p>
-
-  <p>
-    <%= form.label :sequence_validated %><br>
-    <%= form.text_field :sequence_validated %>
-  </p>
-
-  <p>
-    <%= form.label :method %><br>
-    <%= form.text_area :method %>
-  </p>
-
-  <p>
-    <%= form.label :Mutant_source_DNA %><br>
-    <%= form.text_area :Mutant_source_DNA %>
-  </p>
-
-  <p>
-    <%= form.label :upstream_check_primers %><br>
-    <%= form.text_area :upstream_check_primers %>
-  </p>
-
-  <p>
-    <%= form.label :downstream_check_primers %><br>
-    <%= form.text_area :downstream_check_primers %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
 <% end %>
 
+<hr>
+<%= link_to 'Back to strain page', strains_path %>
+<br>
 <%= link_to 'Back to main page', welcome_index_path %>
+
+

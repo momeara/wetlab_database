@@ -7,8 +7,7 @@
       Teresa O'Meara Lab
     </a>
     </h2>
-  </span>    
-  
+  </span>      
 </nav>
 
 <div class="jumbotron text-center">
@@ -17,15 +16,14 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <h2>Fungal strains</h2>
-      <p>A database of lab fungal strains</p>
-    </div>
-    <div class="col-sm-4">
-      <%= link_to 'Fungal Strain Database', controller: 'strains' %>
+    <div class="col-sm">
+      <p> This database contains information about the fungal strains that have been used by the O'Meara lab. Please keep it up-to-date.
+      <h3> View the <%= link_to 'Database', controller: 'strains' %> </h3>
       <br>
-      <%= link_to 'New Fungal Strain', new_strain_path %>
+      <h3> Add a <%= link_to 'new strain', new_strain_path %> to the database </h3>
     </div>
   </div>
 </div>
+
+
 
