@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <span>
+    <h2>
+    <a href='https://omeara.lab.medicine.umich.edu/'>
+      Teresa O'Meara Lab
+    </a>
+    </h2>
+  </span>    
+  
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
+      <span class="font-weight-bold">Name:</span>
+      <%= @primer.name %> </br>
+
+      <span class="font-weight-bold">Sequence:</span><br>
+      <%= @primer.sequence %> </br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm text-right">
+      <h3>
+	<%= link_to 'Edit Primer', edit_primer_path(@primer) %>
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+<hr>
+<%= link_to 'Back to primer page', primers_path %>
+<br>
+<%= link_to 'Back to main page', welcome_index_path %>

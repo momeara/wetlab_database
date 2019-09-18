@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_04_210955) do
+ActiveRecord::Schema.define(version: 2019_09_18_234359) do
+
+  create_table "plasmids", force: :cascade do |t|
+    t.string "name"
+    t.string "source"
+    t.string "method"
+    t.string "reference"
+    t.string "sequence_validated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "primers", force: :cascade do |t|
+    t.string "name"
+    t.text "sequence"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "strains", force: :cascade do |t|
     t.string "accession"

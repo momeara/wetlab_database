@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <span>
+    <h2>
+    <a href='https://omeara.lab.medicine.umich.edu/'>
+      Teresa O'Meara Lab
+    </a>
+    </h2>
+  </span>    
+  
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Identifiers</h4>
+	</div>
+	<div class="panel-body">
+	  <span class="font-weight-bold">Name:</span> <%= @plasmid.name %> </br>
+	</div>
+      </div>
+      <br>
+      <br>
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Source</h4>
+	</div>
+	<div class="panel-body">
+
+	  <span class="font-weight-bold">Souce:</span> <%= @plasmid.source %> </br>
+
+	  <!--show if TOMeara Lab -->
+	  <span class="font-weight-bold">Method:</span> <%= @plasmid.method %> </br>
+
+	  <!--show if Other Lab -->	  
+          <span class="font-weight-bold">Reference:</span> <%= @plasmid.reference %> </br>
+	  </br>
+	  </br>
+          <span class="font-weight-bold">Sequence Validated:</span> <%= @plasmid.sequence_validated %> </br>
+	</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm text-right">
+      <h3>
+	<%= link_to 'Edit Plasmid', edit_plasmid_path(@plasmid) %>
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+<hr>
+<%= link_to 'Back to plasmid page', plasmids_path %>
+<br>
+<%= link_to 'Back to main page', welcome_index_path %>

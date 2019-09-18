@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <span>
+    <h2>
+    <a href='https://omeara.lab.medicine.umich.edu/'>
+      Teresa O'Meara Lab
+    </a>
+    </h2>
+  </span>    
+  
+</nav>
+
+
+<h1>Edit plasmid</h1>
+
+<%= form_with(model: @plasmid, local: true) do |form| %>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Identifiers</h4>
+	</div>
+	<div class="panel-body">
+	  <%= form.label :name %>
+	  <%= form.text_field :name, :required => true %> </br>
+	</div>
+      </div>
+      <br>
+      <br>
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <h4>Source</h4>
+	</div>
+	<div class="panel-body">
+	  <%= form.label :source %>
+	  <%= form.select :source, ['O\'Meara Lab', 'Other Lab'], :required => true %> </br>
+
+	  <!--show if TOMeara Lab -->
+	  <br>
+	  Fill these in if O'Meara lab was selected:<br>
+	  <%= form.label :method %>
+	  <%= form.text_field :method %> </br>
+
+	  <!--show if Other Lab -->
+	  <br>
+	  Fill these in if Other Lab was selected:<br>
+	  <%= form.label :reference %>
+	  <%= form.text_field :reference %> </br>
+
+	  </br>
+	  </br>
+	  <%= form.label :sequence_validated %>
+	  <%= form.text_field :sequence_validated %> </br>
+
+	</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-lg">
+      <center>
+      <h2><%= form.submit %></h2>
+      </center>
+    </div>
+  </div>
+</div>
+
+
+<% end %>
+
+<hr>
+<%= link_to 'Back to plasmid page', plasmids_path %>
+<br>
+<%= link_to 'Back to main page', welcome_index_path %>

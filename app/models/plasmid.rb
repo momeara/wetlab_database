@@ -1,0 +1,2 @@
+class Plasmid < ApplicationRecord
+end
