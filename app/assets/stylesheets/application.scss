@@ -14,13 +14,13 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-html {
-    font-family: 'Lato', san-sarif;
-    font-weight: 300;
-}
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+body {
+    font-family: 'Lato', san-sarif;
+    font-weight: 300;
+}
 
 
