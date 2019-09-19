@@ -4,6 +4,11 @@ http_basic_authenticate_with name: "omearalab", password: "example", except: [:i
 
   def index
     @strains = Strain.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @strains.to_csv, filename: "strains-#{Date.today}.csv" }
+    end
   end
 
   def show

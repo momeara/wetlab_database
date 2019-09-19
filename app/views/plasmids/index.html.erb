@@ -19,6 +19,11 @@
         <thead>
 	  <tr>
             <th scope="col"><b>Name</b></th>
+	    <th></th>
+	    <th></th>
+	    <th scope="col"> Download:
+	      <%= link_to 'csv', plasmids_path(format: "csv") %>
+	    </th>
 	  </tr>
         </thead>
         <tbody>
