@@ -21,14 +21,21 @@
 	  <h4>Identifiers</h4>
 	</div>
 	<div class="panel-body">
-	  <%= form.label :accession %>
-	  <%= form.text_field :accession, :required => true %> </br>
+	  <div class="form-group">
+	    <%= form.label :accession %>
+	    <%= form.text_field :accession, :required => true %>
+	  </div>
 
-	  <%= form.label :common_name %>
-	  <%= form.text_field :common_name, :required => true %> </br>
+	  <div class="form-group">
+	    <%= form.label :common_name %>
+	    <%= form.text_field :common_name, :required => true %>
+	  </div>
 
-	  <%= form.label :keywords %>
-	  <%= form.text_field :keywords %> </br>
+	  <div class="form-group">
+	    <%= form.label :keywords %>
+	    <%= form.text_field :keywords %>
+	  </div>
+	  
 	</div>
       </div>
       <br>
@@ -38,37 +45,49 @@
 	  <h4>Source</h4>
 	</div>
 	<div class="panel-body">
-	  <%= form.label :strain_background %>
-	  <%= form.text_field :strain_background, :required => true%> </br>
-	  
-	  <%= form.label :source %>
-	  <%= form.select :source, ['O\'Meara Lab', 'Other Lab'], :required => true %> </br>
+	  <div class="form-group">
+	    <%= form.label :strain_background %>
+	    <%= form.text_field :strain_background, :required => true%>
+	  </div>
 
-	  <!--show if TOMeara Lab -->
 	  <br>
-	  Fill these in if O'Meara lab was selected:<br>
-	  <%= content_tag :div, class: 'js-dependent-fields', data: { 'source-id': 'strain_source', 'option-value': 'O\'Meara Lab'} do %>
+	  
+	  <div class="form-group">
+	    <%= form.label :source %>
+	    <%= form.select :source, ['O\'Meara Lab', 'Other Lab'], :required => true %>
+	  </div>
+	  
+	  <!--show if TOMeara Lab -->
+	  <div class="form-group" id="strain_method_group">
 	    <%= form.label :method %>
-	    <%= form.text_field :method %> </br>
-	  <% end %>
+	    <%= form.text_field :method %>
+	  </div>
 
-	  <%= form.label :Mutant_source_DNA %>
-	  <%= form.text_field :Mutant_source_DNA %> </br>
+	  <div class="form-group" id="strain_Mutant_source_DNA_group">
+	    <%= form.label :Mutant_source_DNA %>
+	    <%= form.text_field :Mutant_source_DNA %>
+	  </div>
 
-	  <%= form.label :upstream_check_primers %>
-	  <%= form.text_field :upstream_check_primers %> </br>
+	  <div class="form-group" id="strain_upstream_check_primers_group">
+	    <%= form.label :upstream_check_primers %>
+	    <%= form.text_field :upstream_check_primers %>
+	  </div>
 
-	  <%= form.label :downstream_check_primers %>
-	  <%= form.text_field :downstream_check_primers %> </br>
+	  <div class="form-group" id="strain_downstream_check_primers_group">
+	    <%= form.label :downstream_check_primers %>
+	    <%= form.text_field :downstream_check_primers %>
+	  </div>
 
 	  <!--show if Other Lab -->
-	  <br>
-	  Fill these in if Other Lab was selected:<br>
-	  <%= form.label :reference %>
-	  <%= form.text_field :reference %> </br>
+	  <div class="form-group" id="strain_reference_group">	  
+	    <%= form.label :reference %>
+	    <%= form.text_field :reference %>
+	  </div>
 
-	  <%= form.label :sequence_validated %>
-	  <%= form.text_field :sequence_validated %> </br>
+	  <div class="form-group" id="strain_sequence_validated_group">  
+	    <%= form.label :sequence_validated %>
+	    <%= form.text_field :sequence_validated %>
+	  </div>
 
 	</div>
       </div>
@@ -80,17 +99,26 @@
 	  <h4>Characterization</h4>
 	</div>
 	<div class="panel-body">
-	  <%= form.label :general_info %><br>
-	  <%= form.text_area :general_info, :rows => 5, :required => true %> </br>
 
-	  <%= form.label :genotype %>
-	  <%= form.text_field :genotype, :required => true %> </br>
+	  <div class="form-group">
+	    <%= form.label :general_info %><br>
+	    <%= form.text_area :general_info, :rows => 5, :required => true %>
+	  </div>
 
-	  <%= form.label :ploidy %>
-	  <%= form.text_field :ploidy, :required => true %> </br>
+	  <div class="form-group">
+	    <%= form.label :genotype %>
+	    <%= form.text_field :genotype, :required => true %>
+	  </div>
 
-	  <%= form.label :phenotype %>
-	  <%= form.text_field :phenotype %> </br>
+	  <div class="form-group">
+	    <%= form.label :ploidy %>
+	    <%= form.text_field :ploidy, :required => true %>
+	  </div>
+
+	  <div class="form-group">
+	    <%= form.label :phenotype %>
+	    <%= form.text_field :phenotype %>
+	  </div>
 	</div>
       </div>
     </div>

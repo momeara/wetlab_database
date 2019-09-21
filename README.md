@@ -32,4 +32,5 @@ The application is a ruby on rails application so, so it must be run as a server
 
     rails server
 
-Then nagigate to the url locally that it says it is served on e.g. `http://localhost:3000`
+Then navigate to the url locally that it says it is served on e.g. `http://localhost:3000`
+
